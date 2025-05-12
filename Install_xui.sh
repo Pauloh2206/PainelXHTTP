@@ -45,28 +45,42 @@ echo "nome de usuário e senha padrão. ANOTE ESSAS INFORMAÇÕES CUIDADOSAMENTE
 echo "Você precisará delas para acessar o painel. O vídeo fornecido mostra onde"
 echo "essas credenciais aparecem (geralmente ao final da saída da instalação)."
 echo "Pressione Enter para continuar após anotar as credenciais..."
-echo "Credenciais abaixo salve"
-sleep "1"
-x-ui settings
-sleep "7"
 read
 
-# Etapa 3: Configuração de Credenciais do Painel (via x-ui)
+# Etapa 3: Configuração de Credenciais do Painel (Automatizada)
 echo "
 ----------------------------------------------------------------------"
 echo "[PASSO 4/7] Configuração de Credenciais de Acesso ao Painel 3x-ui"
 echo "----------------------------------------------------------------------"
-echo "Agora, vamos alterar o usuário e senha padrão do painel."
-echo "Execute o comando 'x-ui' no seu terminal."
-echo "Siga as instruções abaixo no menu interativo do x-ui:"
-echo "1. Digite 'x-ui' e pressione Enter."
-echo "2. Escolha a opção '6' (Modify Panel Settings)."
-echo "3. Confirme digitando 'y' e pressionando Enter."
-echo "4. Defina seu novo nome de usuário para o painel e pressione Enter."
-echo "5. Defina sua nova senha para o painel e pressione Enter."
-echo "6. Confirme novamente digitando 'y' e pressionando Enter."
-echo "Após concluir estes passos, suas credenciais de acesso ao painel estarão atualizadas."
-echo "Pressione Enter para continuar o script após configurar as credenciais..."
+echo "Agora, vamos alterar o usuário e senha padrão do painel automaticamente."
+
+read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+while [[ -z "$novo_usuario" ]]; do
+    echo "O nome de usuário não pode ser vazio."
+    read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+done
+
+read -sp "Digite a nova senha para o painel: " nova_senha
+while [[ -z "$nova_senha" ]]; do
+    echo "
+A senha não pode ser vazia."
+    read -sp "Digite a nova senha para o painel: " nova_senha
+done
+echo ""
+
+# Tenta definir o novo usuário e senha
+if sudo /usr/local/x-ui/x-ui setting -username "$novo_usuario" -password "$nova_senha"; then
+    echo "Nome de usuário e senha do painel atualizados com sucesso para:"
+    echo "Usuário: $novo_usuario"
+    echo "Senha: [OCULTA]"
+else
+    echo "Falha ao atualizar o nome de usuário e senha do painel."
+    echo "Você pode tentar manualmente usando o comando 'x-ui' e escolhendo a opção 6."
+fi
+
+echo "
+Após esta configuração, suas credenciais de acesso ao painel estarão atualizadas (ou você recebeu instruções se falhou)."
+echo "Pressione Enter para continuar o script..."
 read
 
 # Etapa 4: Criação do Cliente no Painel
@@ -76,7 +90,7 @@ echo "[PASSO 5/7] Criação do Cliente no Painel 3x-ui"
 echo "----------------------------------------------------------------------"
 echo "Esta etapa é realizada diretamente na interface web do painel 3x-ui."
 echo "1. Acesse a URL do painel que você anotou anteriormente."
-echo "2. Faça login com o novo usuário e senha que você acabou de configurar."
+echo "2. Faça login com o novo usuário e senha que você acabou de configurar (ou os padrões se a alteração automática falhou)."
 echo "3. Siga as instruções do vídeo fornecido para criar um novo cliente."
 echo "   (O vídeo detalha o processo de criação do cliente dentro do painel)."
 echo "Pressione Enter para continuar o script após criar o cliente no painel..."
@@ -119,4 +133,3 @@ echo "Lembre-se de verificar se todos os serviços estão funcionando como esper
 echo "Consulte o vídeo original para detalhes visuais da configuração do painel e da BunnyCDN. (telegram: @sunmodls)"
 
 exit 0
-
