@@ -45,6 +45,10 @@ echo "nome de usuário e senha padrão. ANOTE ESSAS INFORMAÇÕES CUIDADOSAMENTE
 echo "Você precisará delas para acessar o painel. O vídeo fornecido mostra onde"
 echo "essas credenciais aparecem (geralmente ao final da saída da instalação)."
 echo "Pressione Enter para continuar após anotar as credenciais..."
+echo "Credenciais abaixo salve"
+sleep "1"
+eval "x-ui settings"
+sleep "1"
 read
 
 # Etapa 3: Configuração de Credenciais do Painel (via x-ui)
