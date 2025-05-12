@@ -33,7 +33,7 @@ fi
 echo "
 [PASSO 3/7] Instalando o script do Painel 3x-ui..."
 echo "Este processo pode levar alguns minutos. Aguarde a finalização."
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Pauloh2206/PainelXHTTP/refs/heads/main/install.sh)
 if [ $? -ne 0 ]; then
     echo "Erro durante a instalação do painel 3x-ui. Verifique a saída do script de instalação."
     exit 1
