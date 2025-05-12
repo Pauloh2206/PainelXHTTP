@@ -3,7 +3,7 @@
 echo "----------------------------------------------------------------------"
 echo "(telegram: @sunmodls) :)"
 echo "Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)"
-echo "Link Vídeo: https://drive.google.com/file/d/16m_-uWCpm8dYgXMVCwGroOQtmwPmqQs8/view"
+echo "Tutorial: https://drive.google.com/file/d/16m_-uWCpm8dYgXMVCwGroOQtmwPmqQs8/view"
 echo "----------------------------------------------------------------------"
 
 sleep "7"
