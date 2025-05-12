@@ -47,8 +47,8 @@ echo "essas credenciais aparecem (geralmente ao final da saída da instalação)
 echo "Pressione Enter para continuar após anotar as credenciais..."
 echo "Credenciais abaixo salve"
 sleep "1"
-eval "x-ui settings"
-sleep "1"
+x-ui settings
+sleep "7"
 read
 
 # Etapa 3: Configuração de Credenciais do Painel (via x-ui)
