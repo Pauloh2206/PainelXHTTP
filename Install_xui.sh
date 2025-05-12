@@ -8,7 +8,7 @@ echo "----------------------------------------------------------------------"
 echo "Iniciando a preparação do servidor e instalação do Painel 3x-ui..."
 echo "----------------------------------------------------------------------"
 sleep "2"
-echo "Tutorial em vídeo das instruções abaixo ⬇️"
+echo "Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)"
 echo "Copia o link: https://drive.google.com/file/d/16m_-uWCpm8dYgXMVCwGroOQtmwPmqQs8/view"
 sleep "7"
 # Etapa 1: Preparação do Servidor
