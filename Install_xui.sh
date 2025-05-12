@@ -54,7 +54,7 @@ echo "[PASSO 4/7] Configuração de Credenciais de Acesso ao Painel 3x-ui"
 echo "----------------------------------------------------------------------"
 echo "Agora, vamos alterar o usuário e senha padrão do painel automaticamente."
 
-read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+-p "Digite o novo nome de usuário para o painel: " novo_usuario
 while [[ -z "$novo_usuario" ]]; do
     echo "O nome de usuário não pode ser vazio."
     read -p "Digite o novo nome de usuário para o painel: " novo_usuario
