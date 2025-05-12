@@ -54,25 +54,54 @@ echo "[PASSO 4/7] Configuração de Credenciais de Acesso ao Painel 3x-ui"
 echo "----------------------------------------------------------------------"
 echo "Agora, vamos alterar o usuário e senha padrão do painel automaticamente."
 
--p "Digite o novo nome de usuário para o painel: " novo_usuario
-while [[ -z "$novo_usuario" ]]; do
-    echo "O nome de usuário não pode ser vazio."
+# Verificar se o script está sendo executado em um terminal interativo
+if [ -t 0 ]; then # Verifica se stdin é um terminal
+    echo "DEBUG: Terminal interativo detectado."
     read -p "Digite o novo nome de usuário para o painel: " novo_usuario
-done
+    echo "DEBUG: Após pedir o novo nome de usuário. Usuário digitado: [$novo_usuario]"
+    while [[ -z "$novo_usuario" ]]; do
+        echo "O nome de usuário não pode ser vazio."
+        read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+        echo "DEBUG: Dentro do loop de usuário. Usuário digitado: [$novo_usuario]"
+    done
 
-read -sp "Digite a nova senha para o painel: " nova_senha
-while [[ -z "$nova_senha" ]]; do
-    echo "
-A senha não pode ser vazia."
     read -sp "Digite a nova senha para o painel: " nova_senha
-done
-echo ""
+    echo ""
+    echo "DEBUG: Após pedir a nova senha (oculta)."
+    while [[ -z "$nova_senha" ]]; do
+        echo "A senha não pode ser vazia."
+        read -sp "Digite a nova senha para o painel: " nova_senha
+        echo ""
+        echo "DEBUG: Dentro do loop de senha (oculta)."
+    done
+else
+    echo "DEBUG: Terminal não interativo detectado."
+    echo "AVISO: Este script não está sendo executado em um terminal interativo."
+    echo "Para a configuração de senha segura, é recomendado executar este script diretamente no terminal."
+    read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+    echo "DEBUG: Após pedir o novo nome de usuário (não interativo). Usuário digitado: [$novo_usuario]"
+    while [[ -z "$novo_usuario" ]]; do
+        echo "O nome de usuário não pode ser vazio."
+        read -p "Digite o novo nome de usuário para o painel: " novo_usuario
+        echo "DEBUG: Dentro do loop de usuário (não interativo). Usuário digitado: [$novo_usuario]"
+    done
 
+    echo "AVISO: A senha será solicitada e VISÍVEL no terminal."
+    read -p "Digite a nova senha para o painel: " nova_senha
+    echo "DEBUG: Após pedir a nova senha (visível)."
+    while [[ -z "$nova_senha" ]]; do
+        echo "A senha não pode ser vazia."
+        read -p "Digite a nova senha para o painel: " nova_senha
+        echo "DEBUG: Dentro do loop de senha (visível)."
+    done
+fi
+
+echo "DEBUG: Tentando definir o novo usuário e senha com o comando x-ui."
 # Tenta definir o novo usuário e senha
 if sudo /usr/local/x-ui/x-ui setting -username "$novo_usuario" -password "$nova_senha"; then
     echo "Nome de usuário e senha do painel atualizados com sucesso para:"
     echo "Usuário: $novo_usuario"
-    echo "Senha: [OCULTA]"
+    echo "Senha: [OCULTA PARA SUA SEGURANÇA]"
 else
     echo "Falha ao atualizar o nome de usuário e senha do painel."
     echo "Você pode tentar manualmente usando o comando 'x-ui' e escolhendo a opção 6."
