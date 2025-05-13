@@ -1,4 +1,4 @@
-# PainelXHTTP - Scripts de Instalação e Guia
+# Painel-XHTTP - Scripts de Instalação e Guia
 
 Este repositório contém os scripts para instalação e configuração do painel 3x-ui.
 
