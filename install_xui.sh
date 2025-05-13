@@ -1,15 +1,25 @@
 #!/bin/bash
 
-echo "----------------------------------------------------------------------"
-echo "(telegram: @sunmodls) :)"
-echo "Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)"
-echo "Tutorial: https://drive.google.com/file/d/16m_-uWCpm8dYgXMVCwGroOQtmwPmqQs8/view"
-echo "----------------------------------------------------------------------"
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # Sem cor
+
+echo -e "${YELLOW}------------------------------------------------------------${NC}"
+echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
+echo -e "${CYAN}Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)${NC}"
+echo -e "${CYAN}Tutorial: https://short-link.me/12goW${NC}"
+echo -e "${YELLOW}------------------------------------------------------------${NC}"
 
 sleep "7"
-echo "Iniciando a instalação do painel 3x-ui..."
+echo -e "${GREEN}Iniciando a instalação do painel 3x-ui...${NC}"
 sleep "4"
+
 bash <(curl -Ls https://raw.githubusercontent.com/Pauloh2206/PainelXHTTP/refs/heads/main/install.sh)
-echo "Script de instalação fornecido com créditos para: (telegram: @sunmodls)"
-echo "PÓS INSTALAÇÃO SEGUE COM O VÍDEO"
+echo -e "${YELLOW}------------------------------------------------------------${NC}"
+echo -e "${CYAN}Script e tutorial fornecido${NC}"
+echo -e "${CYAN}Telegram: BY: @sunmodls${NC}"
+echo -e "${RED}PÓS INSTALAÇÃO SEGUE COM O VÍDEO${NC}"
+echo -e "${YELLOW}------------------------------------------------------------${NC}"
 sleep "2"
