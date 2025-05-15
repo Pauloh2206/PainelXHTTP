@@ -12,7 +12,7 @@ echo -e "${CYAN}Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)$
 echo -e "${CYAN}Tutorial: https://short-link.me/12goW${NC}"
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 
-sleep "7"
+sleep "8"
 echo -e "${GREEN}Iniciando a instalação do painel 3x-ui...${NC}"
 sleep "4"
 
@@ -21,5 +21,7 @@ echo -e "${YELLOW}------------------------------------------------------------${
 echo -e "${CYAN}Script e tutorial fornecido${NC}"
 echo -e "${CYAN}Telegram: BY: @sunmodls${NC}"
 echo -e "${RED}PÓS INSTALAÇÃO SEGUE COM O VÍDEO${NC}"
+echo -e "${BLUE}PEGA AS CREDENCIAIS DE ACESSO DA URL${NC}"
+echo -e "${BLUE}VOCÊ VERÁ NO VÍDEO${NC}"
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 sleep "2"
