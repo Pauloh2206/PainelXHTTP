@@ -5,7 +5,7 @@ CYAN='\033[0;36m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m'
-
+echo -e apt update && apt upgrade -y
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
 echo -e "${CYAN}Tutorial em vídeo das instruções abaixo ⬇️ (Recomendado)${NC}"
