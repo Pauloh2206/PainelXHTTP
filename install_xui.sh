@@ -12,12 +12,12 @@ apt update && apt upgrade -y
 
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
-echo -e "${CYAN}Tutorial em vÃ­deo das instruÃ§Ãµes abaixo â¬‡ï¸ (Recomendado)${NC}"
+echo -e "${CYAN}Tutorial em video das instrucoes abaixo¸ (Recomendado)${NC}"
 echo -e "${CYAN}Tutorial: https://short-link.me/12goW${NC}"
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 
 sleep "8"
-echo -e "${GREEN}Iniciando a instalaÃ§Ã£o do painel 3x-ui...${NC}"
+echo -e "${GREEN}Iniciando a instalacao do painel 3x-ui...${NC}"
 sleep "4"
 
 bash <(curl -Ls https://raw.githubusercontent.com/Pauloh2206/PainelXHTTP/refs/heads/main/install.sh)
