@@ -13,7 +13,7 @@ apt update && apt upgrade -y
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
 echo -e "${CYAN}Tutorial em video das instrucoes abaixo¸ (Recomendado)${NC}"
-echo -e "${CYAN}Tutorial: https://short-link.me/12goW${NC}"
+echo -e "${CYAN}Tutorial: https://drive.google.com/file/d/15PeoSMlf5_oGsXYn8yV0MdvFHbQSrVXH/view?usp=drivesdk${NC}"
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 
 sleep "8"
