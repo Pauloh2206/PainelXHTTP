@@ -7,8 +7,11 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 # Adicionando os comandos de atualizaÃ§Ã£o do sistema
+echo -e "${GREEN} Desativando o firewall...${NC}"
+sleep "2"
+sudo ufw disable
 echo -e "${GREEN}Atualizando o sistema...${NC}"
-apt update && apt upgrade -y
+apt update -y
 
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
