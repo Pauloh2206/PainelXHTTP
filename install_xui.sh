@@ -10,6 +10,7 @@ NC='\033[0m'
 echo -e "${GREEN} Desativando o firewall...${NC}"
 sleep "2"
 sudo ufw disable
+sleep "3"
 echo -e "${GREEN}Atualizando o sistema...${NC}"
 apt update -y
 
