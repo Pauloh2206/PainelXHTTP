@@ -24,7 +24,7 @@ sleep "8"
 echo -e "${GREEN}Iniciando a instalacao do painel 3x-ui...${NC}"
 sleep "4"
 
-bash <(curl -Ls https://raw.githubusercontent.com/Pauloh2206/PainelXHTTP/refs/heads/main/install.sh)
+bash <(curl -Ls -H "Authorization: token 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" https://raw.githubusercontent.com/Pauloh2206/PainelXHTTP/refs/heads/main/install.sh)
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}Script e tutorial fornecido${NC}"
 echo -e "${CYAN}Telegram: BY: @sunmodls${NC}"
