@@ -16,8 +16,8 @@ apt update -y
 
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 echo -e "${CYAN}(telegram: @sunmodls) :)${NC}"
-echo -e "${CYAN}Tutorial em video das instrucoes abaixo¸ (Recomendado)${NC}"
-echo -e "${CYAN}Tutorial: https://drive.google.com/file/d/15PeoSMlf5_oGsXYn8yV0MdvFHbQSrVXH/view?usp=drivesdk${NC}"
+echo -e "${CYAN}Tutorial em video atualizado abaixo¸ (Recomendado)${NC}"
+echo -e "${CYAN}Tutorial: https://1drv.ms/v/c/aa01922591db4df3/Efxs9vs56ntBka6DU8bh6acBI1jAtb5cfa8fn5BTTA6l9w${NC}"
 echo -e "${YELLOW}------------------------------------------------------------${NC}"
 
 sleep "8"
